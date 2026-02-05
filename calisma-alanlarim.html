@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerim | Uzm. Klnk. Psk. Tuğba Yılmaz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.JPG" type="image/png">
+    <style>
+        .page-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 50px 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .page-header h1 { margin-bottom: 10px; font-size: 2.2rem; }
+        .page-header p { opacity: 0.9; font-size: 1.1rem; }
+
+        .services-section {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+            min-height: 80vh;
+        }
+
+        /* Izgara Yapısı */
+        .services-grid-large {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+        }
+
+        /* Fotoğraflı Kart Tasarımı */
+        .service-card-photo {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            border: 1px solid rgba(0,0,0,0.03);
+            height: 100%;
+        }
+
+        .service-card-photo:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+
+        /* Resim Alanı */
+        .card-img-wrapper {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card-photo:hover .card-img-wrapper img {
+            transform: scale(1.05);
+        }
+
+        /* İçerik Alanı */
+        .card-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-size: 1.35rem;
+            font-weight: 700;
+        }
+
+        .card-content p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-link-text {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            margin-top: auto;
+        }
+        .card-link-text i { margin-left: 8px; transition: margin 0.3s; }
+        .service-card-photo:hover .card-link-text i { margin-left: 12px; }
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-img-link">
+                <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Anasayfa</a>
+                <a href="hakkimda.html">Hakkımda</a>
+                <div class="dropdown">
+                    <a href="calisma-alanlarim.html" class="dropbtn">Çalışma Alanlarım <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="hizmet-bireysel.html">Bireysel Terapi</a>
+                        <a href="hizmet-online.html">Online Terapi</a>
+                        <a href="hizmet-cocuk.html">Çocuk Terapisi</a>
+                        <a href="hizmet-ergen.html">Ergen Terapisi</a>
+                        <a href="hizmet-grup.html">Grup Terapisi</a>
+                        <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
+                    </div>
+                </div>
+                <a href="icerikler.html">İçerikler</a>
+                
+                <a href="blog.html">Blog</a>
+                <a href="sss.html">SSS</a>
+                <a href="iletisim.html">İletişim</a>
+                <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Hizmetlerim</h1>
+            <p>Profesyonel uzmanlık alanlarım ve size özel destek süreçleri.</p>
+        </div>
+    </div>
+
+    <section class="services-section">
+        <div class="container">
+            <div class="services-grid-large">
+                
+                <a href="hizmet-bireysel.html" class="service-card-photo">
+                    <div class="card-img-wrapper">
+                        <img src="images/bireysel.jpeg" alt="Bireysel Terapi">
+                    </div>
+                    <div class="card-content">
+                        <h3>Bireysel Terapi</h3>
+                        <p>Kişinin iç dünyasını keşfetmesi, duygusal güçlüklerin kökenini anlamlandırması ve yaşam kalitesini artırması amacıyla yürütülen profesyonel bir süreçtir.</p>
+                        <span class="card-link-text">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="hizmet-online.html" class="service-card-photo">
+                    <div class="card-img-wrapper">
+                        <img src="images/online.jpeg" alt="Online Terapi">
+                    </div>
+                    <div class="card-content">
+                        <h3>Online Terapi</h3>
+                        <p>Coğrafi kısıtlamalar, zaman yönetimi güçlükleri veya bedensel engeller nedeniyle klinik ortama gelemeyen bireyler için sunulan profesyonel destek hizmetidir.</p>
+                        <span class="card-link-text">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="hizmet-cocuk.html" class="service-card-photo">
+                    <div class="card-img-wrapper">
+                        <img src="images/cocuk.jpeg" alt="Çocuk Terapisi">
+                    </div>
+                    <div class="card-content">
+                        <h3>Çocuk Terapisi</h3>
+                        <p>Çocukların kendilerini sözel olarak ifade edemedikleri durumlarda "oyun" aracılığıyla iç dünyalarını anlamlandırmayı hedefleyen uzmanlık alanıdır.</p>
+                        <span class="card-link-text">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="hizmet-ergen.html" class="service-card-photo">
+                    <div class="card-img-wrapper">
+                        <img src="images/ergen.jpeg" alt="Ergen Terapisi">
+                    </div>
+                    <div class="card-content">
+                        <h3>Ergen Terapisi</h3>
+                        <p>Ergenlik dönemindeki biyolojik, bilişsel ve sosyal değişim süreçlerinde kimlik gelişimi, sınav kaygısı ve aile içi iletişimi güçlendirmeyi hedefler.</p>
+                        <span class="card-link-text">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="hizmet-grup.html" class="service-card-photo">
+                    <div class="card-img-wrapper">
+                        <img src="images/grup.jpeg" alt="Grup Terapisi">
+                    </div>
+                    <div class="card-content">
+                        <h3>Grup Terapisi</h3>
+                        <p>Bireylerin benzer zorluklar yaşayan diğer kişilerle etkileşim kurarak iyileştiği, aidiyet hissinin güçlendiği deneyimsel bir süreçtir.</p>
+                        <span class="card-link-text">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="hizmet-kurumsal.html" class="service-card-photo">
+                    <div class="card-img-wrapper">
+                        <img src="images/kurumsal.jpeg" alt="Kurumsal Danışmanlık">
+                    </div>
+                    <div class="card-content">
+                        <h3>Kurumsal Danışmanlık</h3>
+                        <p>Çalışanların psikolojik sağlığı, ekipler arası güven ve kapsayıcı bir çalışma ortamı ile kurum verimliliğini artırmaya yönelik profesyonel çözümler.</p>
+                        <span class="card-link-text">Detaylı Bilgi <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col brand-col">
+                    <a href="index.html" style="display: inline-block;">
+                        <img src="images/logo.jpg" alt="Uzm. Klnk. Psk. Tuğba Yılmaz" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">
+                        Her hikaye biriciktir. Kendi hikayenizin kahramanı olmanız için çıktığınız bu yolda, profesyonel ve şefkatli bir rehberlik sunuyorum.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:iletisim@tugbayilmaz.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Hızlı Erişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="hakkimda.html">Hakkımda</a></li>
+                        <li><a href="calisma-alanlarim.html">Çalışma Alanlarım</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="#">KVKK & Gizlilik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col disclaimer-col">
+                    <h3>Yasal Uyarı</h3>
+                    <p class="disclaimer-text">
+                        Bu sitede paylaşılan bilgiler yalnızca bilgilendirme amaçlıdır. Tanı ve tedavi yerine geçmez. Herhangi bir sağlık sorununuz için lütfen uzman bir hekime başvurunuz. <br><br>
+                        Sitedeki içerikler Uzm. Klnk. Psk. Tuğba Yılmaz'a aittir.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Uzm. Klnk. Psk. Tuğba Yılmaz. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905312815738?text=Merhaba,%20randevu%20hakkında%20bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>

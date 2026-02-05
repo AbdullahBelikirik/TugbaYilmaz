@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sıkça Sorulan Sorular | Uzm. Klnk. Psk. Tuğba Yılmaz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.JPG" type="image/png">
+    <style>
+        /* --- SAYFAYA ÖZEL STİLLER --- */
+        
+        .page-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 35px 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .page-header h1 { margin-bottom: 0; font-size: 2.2rem; color: white; }
+
+        .faq-section {
+            background-color: var(--bg-light);
+            padding: 80px 0; /* Üst/Alt boşluğu artırdım */
+            min-height: 80vh;
+        }
+
+        .faq-container {
+            max-width: 900px; /* Genişliği biraz artırdım */
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 20px; /* Kutular arası boşluk arttı */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border: 1px solid rgba(0,0,0,0.02);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        /* SORU BAŞLIĞI (BÜYÜTÜLDÜ) */
+        .faq-question {
+            padding: 25px 30px; /* Tıklama alanı genişledi */
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #333;
+            font-size: 1.2rem; /* Font büyüdü (Eskisi 1.05rem) */
+            background: white;
+            transition: background 0.3s;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+            background-color: #fafafa;
+        }
+
+        .faq-icon {
+            font-size: 1rem;
+            color: #999;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            color: var(--primary-color);
+        }
+
+        /* CEVAP ALANI (BÜYÜTÜLDÜ) */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: #fafafa;
+            color: #444; /* Biraz daha koyu gri, okuması kolay olsun */
+            font-size: 1.05rem; /* Font büyüdü (Eskisi 0.95rem) */
+            line-height: 1.8; /* Satır araları açıldı */
+            padding: 0 30px;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 30px 30px 30px;
+            max-height: 600px;
+        }
+
+        .faq-answer p {
+            margin-bottom: 15px;
+        }
+        .faq-answer p:last-child {
+            margin-bottom: 0;
+        }
+
+        .cta-box {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #ddd;
+        }
+        .cta-box p { color: #666; margin-bottom: 25px; font-size: 1.1rem; }
+
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-img-link">
+                <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Anasayfa</a>
+                <a href="hakkimda.html">Hakkımda</a>
+                <div class="dropdown">
+                    <a href="calisma-alanlarim.html" class="dropbtn">Çalışma Alanlarım <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="hizmet-bireysel.html">Bireysel Terapi</a>
+                        <a href="hizmet-online.html">Online Terapi</a>
+                        <a href="hizmet-cocuk.html">Çocuk Terapisi</a>
+                        <a href="hizmet-ergen.html">Ergen Terapisi</a>
+                        <a href="hizmet-grup.html">Grup Terapisi</a>
+                        <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
+                    </div>
+                </div>
+                <a href="icerikler.html">İçerikler</a>
+                
+                <a href="blog.html">Blog</a>
+                <a href="sss.html">SSS</a>
+                <a href="iletisim.html">İletişim</a>
+                <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Sıkça Sorulan Sorular</h1>
+        </div>
+    </div>
+
+    <section class="faq-section">
+        <div class="container faq-container">
+            
+            <div class="faq-item active">
+                <div class="faq-question">
+                    Terapi almam gerektiğini nasıl anlarım?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Mevcut sorunlar kişinin günlük hayatını, iş performansını veya sosyal ilişkilerini aksatmaya başladığında profesyonel desteğe ihtiyaç duyulduğu söylenebilir.</p>
+                    <p>Ayrıca, içinden çıkılamayan duygusal döngüler, tekrarlayan ilişki sorunları, baş edilemeyen kaygılar veya kişinin kendi iç dünyasını daha derinlemesine tanıma isteği de terapiye başlamak için en önemli göstergelerdir.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Psikolog mu yoksa psikiyatrist mi tercih edilmelidir?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Psikiyatristler tıp eğitimi almış hekimlerdir; tanı koyma, tıbbi tahlil isteme ve ilaç tedavisi yürütme yetkisine sahiptirler.</p>
+                    <p>Psikologlar ise konuşma odaklı psikoterapi yöntemleri ile çalışmaktadır. Birçok durumda her iki disiplinin eş zamanlı ve iş birliği içinde çalışması, danışan için en yüksek faydayı sağlamaktadır.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Bir psikoloğu seçerken nelere dikkat edilmelidir?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Uzman seçiminde en kritik kriterler; kişinin lisans ve klinik psikoloji yüksek lisans eğitimlerini tamamlamış olması, etik ilkelere bağlılığı ve çalışacağı alanla ilgili spesifik eğitimleri (Dinamik Terapi, Oyun Terapisi vb.) almış olmasıdır.</p>
+                    <p>Ayrıca, danışan ile uzman arasında kurulacak olan terapötik bağ (güven ilişkisi), iyileşme sürecinin başarısında en belirleyici unsurdur.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Seanslar ne kadar sürer ve hangi sıklıkta yapılır?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Seans süreleri her oturum için <strong>45 dakika</strong> olarak belirlenmiştir. Terapötik sürecin sürekliliği ve verimliliği açısından seanslar standart olarak haftada bir kez gerçekleştirilmektedir.</p>
+                    <p>Ancak çalışılan konunun derinliği ve danışanın ihtiyacı doğrultusunda seans sıklığı haftada iki güne çıkarılabilmektedir.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Online terapi, yüz yüze terapi kadar etkili midir?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Bilimsel araştırmalar, uygun teknik koşullar ve profesyonel bir çerçeve sağlandığında online terapinin yüz yüze terapi ile benzer düzeyde iyileştirici etkiler sunduğunu doğrulamaktadır.</p>
+                    <p>Online terapi; mesafe, zaman kısıtlılığı veya bedensel engeller nedeniyle klinik ortama gelemeyen danışanlar için sürecin sürekliliğini koruyan güvenli bir yöntemdir.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Gizlilik ve etik kurallar nasıl uygulanır?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Terapi odasında paylaşılan tüm bilgiler, etik yönetmelikler ve Kişisel Verilerin Korunması Kanunu kapsamında tamamen gizli tutulmaktadır.</p>
+                    <p>Yalnızca danışanın kendisine veya bir başkasına zarar verme riski gibi hayati durumlarda yasal ve etik yükümlülükler gereği bildirim yapılmaktadır.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Terapi süreci toplamda ne kadar devam eder?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Terapi sürecinin toplam süresi; çalışılan konunun niteliğine, danışanın hedeflerine ve çalışılan dinamiklere göre değişkenlik göstermektedir.</p>
+                    <p>Dinamik Psikoterapi odaklı çalışmalar, sadece mevcut semptomları gidermeyi değil, kişinin ruhsal yapısında kalıcı bir farkındalık ve dönüşüm sağlamayı amaçladığı için süreç zamana yayılmaktadır.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Terapi sürecindeki değişim ne zaman gerçekleşir?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Psikoterapide değişim hızı her danışanın içsel yolculuğuna ve çalışma konusuna göre farklılık gösterir.</p>
+                    <p>İlk seanslarda genellikle farkındalık artışı ve semptomlarda bir rahatlama gözlemlenirken, kalıcı değişimler ve karakter düzeyindeki dönüşümler içsel süreçlerin zamanla işlenmesiyle gerçekleşmektedir.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Çocuğum için oyun terapisine nasıl karar verebilirim?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Çocuklar duygularını ve yaşadıkları zorlukları yetişkinler gibi sözel olarak ifade etmekte güçlük çekebilirler. Eğer çocukta;</p>
+                    <ul style="margin-bottom:10px; padding-left:20px; color:#555;">
+                        <li>Ani duygu durumu değişimleri,</li>
+                        <li>Uyku veya iştah sorunları,</li>
+                        <li>Okulda uyum problemleri,</li>
+                        <li>Aşırı kaygı ve takıntılı davranışlar,</li>
+                        <li>Travmatik bir olay sonrası gerileme (alt ıslatma, parmak emme vb.),</li>
+                    </ul>
+                    <p>gözlemleniyorsa oyun terapisine başvurulması önerilir. Oyun, çocuğun doğal dili olduğu için bu süreç, çocuğun iç dünyasını en sağlıklı şekilde dışa vurmasına ve iyileşmesine olanak tanır.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Oyun terapisinde ebeveynlerin rolü nedir?
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Çocuklarla yürütülen süreçlerde ebeveynler, iyileşme yolculuğunun temel destekçileridir. Çocukla yapılan oyun terapisi seanslarına ek olarak, belirli periyotlarla ebeveyn danışmanlığı görüşmeleri gerçekleştirilmektedir.</p>
+                    <p>Bu görüşmelerde çocuğun gelişimi takip edilmekte ve ev ortamındaki destekleyici tutumlar üzerine rehberlik sunulmaktadır.</p>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <p>Aradığınız cevabı bulamadınız mı?</p>
+                <a href="iletisim.html" class="btn btn-primary"><i class="fas fa-envelope"></i> Bize Ulaşın</a>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col brand-col">
+                    <a href="index.html" style="display: inline-block;">
+                        <img src="images/logo.jpg" alt="Uzm. Klnk. Psk. Tuğba Yılmaz" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">
+                        Her hikaye biriciktir. Kendi hikayenizin kahramanı olmanız için çıktığınız bu yolda, profesyonel ve şefkatli bir rehberlik sunuyorum.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:iletisim@tugbayilmaz.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Hızlı Erişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="hakkimda.html">Hakkımda</a></li>
+                        <li><a href="calisma-alanlarim.html">Çalışma Alanlarım</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="#">KVKK & Gizlilik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col disclaimer-col">
+                    <h3>Yasal Uyarı</h3>
+                    <p class="disclaimer-text">
+                        Bu sitede paylaşılan bilgiler yalnızca bilgilendirme amaçlıdır. Tanı ve tedavi yerine geçmez. Herhangi bir sağlık sorununuz için lütfen uzman bir hekime başvurunuz. <br><br>
+                        Sitedeki içerikler Uzm. Klnk. Psk. Tuğba Yılmaz'a aittir.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Uzm. Klnk. Psk. Tuğba Yılmaz. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                
+                if (item.classList.contains('active')) {
+                    item.classList.remove('active');
+                } else {
+                    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+                }
+            });
+        });
+    </script>
+
+    <a href="https://wa.me/905312815738?text=Merhaba,%20randevu%20hakkında%20bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>

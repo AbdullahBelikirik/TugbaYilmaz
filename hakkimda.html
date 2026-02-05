@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımda | Uzm. Klnk. Psk. Tuğba Yılmaz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.JPG" type="image/png">
+    <style>
+        /* --- SAYFAYA ÖZEL STİLLER --- */
+        
+        .page-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 35px 0;
+            margin-top: 80px;
+            text-align: center;
+        }
+        .page-header h1 { margin-bottom: 0; font-size: 2.2rem; color: white; }
+
+        .about-section {
+            background-color: var(--bg-light);
+            padding: 60px 0;
+            min-height: 80vh;
+        }
+
+        .about-container {
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        /* SOL KOLON */
+        .about-left-col {
+            flex: 0 0 380px;
+        }
+
+        .about-img-box img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            display: block;
+        }
+
+        /* SAĞ KOLON (YAZI) */
+        .about-right-col {
+            flex: 1;
+        }
+        .about-right-col h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .about-right-col p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify;
+            font-size: 1.05rem;
+        }
+
+        /* ALINTI KUTUSU */
+        .quote-box {
+            border-left: 4px solid var(--primary-color);
+            background: rgba(255,255,255,0.6);
+            padding: 20px 25px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #666;
+            font-size: 1.1rem;
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* --- İKONLU EĞİTİM BÖLÜMÜ --- */
+        .education-grid-section {
+            background-color: var(--primary-dark); /* Koyu Yeşil */
+            color: white;
+            padding: 60px 40px;
+            border-radius: 16px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .education-grid-section h3 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .education-grid-section p.subtitle {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px 30px;
+            justify-content: center;
+        }
+
+        .edu-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .edu-icon {
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .edu-card:hover .edu-icon {
+            background-color: var(--primary-color);
+            transform: scale(1.1);
+        }
+
+        .edu-icon i { font-size: 2.5rem; color: white; }
+
+        .edu-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .edu-card p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.6;
+            max-width: 320px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 900px) {
+            .about-container { flex-direction: column; }
+            .about-left-col { width: 100%; max-width: 400px; margin: 0 auto; }
+            .education-grid-section { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-img-link">
+                <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Anasayfa</a>
+                <a href="hakkimda.html">Hakkımda</a>
+                <div class="dropdown">
+                    <a href="calisma-alanlarim.html" class="dropbtn">Çalışma Alanlarım <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="hizmet-bireysel.html">Bireysel Terapi</a>
+                        <a href="hizmet-online.html">Online Terapi</a>
+                        <a href="hizmet-cocuk.html">Çocuk Terapisi</a>
+                        <a href="hizmet-ergen.html">Ergen Terapisi</a>
+                        <a href="hizmet-grup.html">Grup Terapisi</a>
+                        <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
+                    </div>
+                </div>
+                <a href="icerikler.html">İçerikler</a>
+                
+                <a href="blog.html">Blog</a>
+                <a href="sss.html">SSS</a>
+                <a href="iletisim.html">İletişim</a>
+                <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Hakkımda</h1>
+        </div>
+    </div>
+
+    <section class="about-section">
+        <div class="container about-container">
+            
+            <div class="about-left-col">
+                <div class="about-img-box">
+                    <img src="images/tugba4.jpeg" alt="Uzm. Klnk. Psk. Tuğba Yılmaz">
+                </div>
+            </div>
+
+            <div class="about-right-col">
+                <h2>Uzm. Klnk. Psk. Tuğba Yılmaz</h2>
+                
+                <p>Lisans eğitimini Yıldız Teknik Üniversitesi Psikolojik Danışmanlık ve Rehberlik bölümünde tamamlayan Tuğba Yılmaz, klinik psikoloji uzmanlığını Rumeli Üniversitesi Klinik Psikoloji yüksek lisans programı ile almıştır. Akademik gelişimi süresince, teorik bilgisini klinik pratikle birleştirmek adına iki yıl boyunca bir psikiyatrist eşliğinde çok sayıda klinik vaka gözlemlemiş ve staj süreçlerini başarıyla tamamlamıştır.</p>
+
+                <p>Üniversite eğitimi boyunca alanın sadece teorik değil, sosyal ve uygulama boyutlarında da aktif bir rol üstlenmiştir. Türkan Sabancı Görme Engelliler Okulu ve Rehberlik Araştırma Merkezi'nde (RAM) saha çalışmalarını yürütmüştür. Aynı zamanda Yıldız Teknik Üniversitesi Psikolojik Danışmanlık Kulübü'nün kuruculuğunu yapmış ve görme engelli bireylere yönelik hazırlanan "Cinsel Engelleri Aşıyorum" projesinde koordinatörlük görevini üstlenerek sosyal sorumluluk projelerine liderlik etmiştir.</p>
+
+                <p>Mezuniyet sonrası profesyonel kariyerinde farklı yaş grupları ve gelişimsel ihtiyaçlar üzerine yoğunlaşmıştır. Özel bir eğitim kurumunda üç yıl boyunca psikolojik danışman olarak görev alarak, sınav sürecindeki öğrencilerin kaygı yönetimi ve motivasyon süreçlerine rehberlik etmiştir. Kariyerinin devamında Özel Eğitim ve Rehabilitasyon Merkezi bünyesinde oyun terapisti olarak görev almış, özel gereksinimli çocukların psikolojik süreçleri ve gelişimsel takipleri üzerine uzmanlaşmıştır.</p>
+                
+                <p>Mesleki çalışmalarına şu anda <strong>Mida Psikoloji</strong> bünyesinde online ve yüz yüze terapi süreçlerini yürüterek devam etmektedir. Danışanının ihtiyacına göre şekillenen eklektik bir yaklaşımı benimsemektedir. Yetişkinlerde; sorunların temelindeki dinamikleri anlamlandırmaya odaklanan <strong>Dinamik Psikoterapi</strong> ekolünü benimsemekte ve bu alandaki çalışmalarını Prof. Dr. Doğan Şahin'den aldığı kapsamlı eğitimlerle temellendirmektedir. Çocuklarda ise <strong>Çocuk Merkezli ve Bilişsel Davranışçı Oyun Terapisi</strong> yöntemlerini kullanarak çocukların iç dünyasına profesyonel bir eşlik sunmaktadır.</p>
+                <p style="margin-top: 30px;">
+                    <a href="iletisim.html" class="btn btn-primary">İletişime Geçin <i class="fas fa-arrow-right" style="margin-left:5px; font-size:0.8rem;"></i></a>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="education-grid-section">
+                <h3>Mesleki Eğitimler ve Sertifikalar</h3>
+                <p class="subtitle">Uzmanlık alanlarımı güçlendiren akademik ve mesleki yetkinlikler.</p>
+                
+                <div class="education-grid">
+                    
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-couch"></i></div>
+                        <h4>Kişilik, Kişilik Bozuklukları ve Dinamik Psikoterapi</h4>
+                        <p>Prof. Dr. Doğan Şahin tarafından verilen, yetişkin terapisinde derinlemesine çalışmayı sağlayan kapsamlı uzmanlık eğitimi.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-brain"></i></div>
+                        <h4>Rasyonel Duygucu & Bilişsel Davranışçı Terapi</h4>
+                        <p>Albert Ellis Institute onaylı (Doç. Dr. Murat Artıran), düşünce ve davranış kalıplarını dönüştürmeye odaklanan terapi eğitimi.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-shapes"></i></div>
+                        <h4>Çocuk Merkezli ve Bilişsel Davranışçı Oyun Terapisi</h4>
+                        <p>Klinik Psikolog Mehmet Teber süpervizörlüğünde, çocukların iç dünyasını oyun yoluyla ifade etmelerini sağlayan terapi yöntemleri.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-venus-mars"></i></div>
+                        <h4>Cinsellik, Cinsel Terapi ve Cinsel Tedaviler</h4>
+                        <p>Dr. Cem Keçe tarafından verilen, cinsel işlev bozuklukları ve sağlıklı cinsellik üzerine kapsamlı tedavi eğitimi.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-users"></i></div>
+                        <h4>Aile Danışmanlığı Sertifika Programı</h4>
+                        <p>Türk PDR Derneği tarafından verilen, aile içi dinamikleri ve çift ilişkilerini düzenlemeye yönelik uzmanlık programı.</p>
+                    </div>
+
+                    <div class="edu-card">
+                        <div class="edu-icon"><i class="fas fa-masks-theater"></i></div>
+                        <h4>Yaratıcı Drama Eğitimi</h4>
+                        <p>MEB Onaylı (Sakarya Uygulamalı Bilimler Üniversitesi), bireysel farkındalık ve ifade becerilerini güçlendiren süreç eğitimi.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col brand-col">
+                    <a href="index.html" style="display: inline-block;">
+                        <img src="images/logo.jpg" alt="Uzm. Klnk. Psk. Tuğba Yılmaz" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">
+                        Her hikaye biriciktir. Kendi hikayenizin kahramanı olmanız için çıktığınız bu yolda, profesyonel ve şefkatli bir rehberlik sunuyorum.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:iletisim@tugbayilmaz.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Hızlı Erişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="hakkimda.html">Hakkımda</a></li>
+                        <li><a href="calisma-alanlarim.html">Çalışma Alanlarım</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="#">KVKK & Gizlilik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col disclaimer-col">
+                    <h3>Yasal Uyarı</h3>
+                    <p class="disclaimer-text">
+                        Bu sitede paylaşılan bilgiler yalnızca bilgilendirme amaçlıdır. Tanı ve tedavi yerine geçmez. Herhangi bir sağlık sorununuz için lütfen uzman bir hekime başvurunuz. <br><br>
+                        Sitedeki içerikler Uzm. Klnk. Psk. Tuğba Yılmaz'a aittir.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Uzm. Klnk. Psk. Tuğba Yılmaz. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905312815738?text=Merhaba,%20randevu%20hakkında%20bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>

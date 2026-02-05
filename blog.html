@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Uzm. Klnk. Psk. Tuğba Yılmaz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.JPG" type="image/png">
+    <style>
+        /* BU SAYFAYA ÖZEL STİLLER */
+        .page-header {
+            background-color: var(--primary-color);
+            color: white;
+            /* YÜKSEKLİK AYARI: Eskiden 50px idi, 35px yaptık ki daha ince olsun */
+            padding: 35px 0; 
+            margin-top: 80px;
+            margin-bottom: 0;
+            text-align: center;
+        }
+        
+        /* Başlık ayarı: Altındaki boşluğu (margin-bottom) sıfırladık */
+        .page-header h1 { 
+            color: white; 
+            margin-bottom: 0; 
+            font-size: 2.2rem; 
+        }
+
+        .blog-section {
+            background-color: var(--bg-light); /* Krem Zemin */
+            padding: 60px 0;
+            min-height: 80vh;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* KART TASARIMI */
+        .blog-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0,0,0,0.03);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .blog-img-box {
+            height: 220px;
+            overflow: hidden;
+        }
+        .blog-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .blog-card:hover .blog-img-box img { transform: scale(1.05); }
+
+        .blog-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blog-date {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .blog-date i { margin-right: 5px; color: var(--primary-color); }
+
+        .blog-content h3 { font-size: 1.3rem; margin-bottom: 15px; color: #333; line-height: 1.4; }
+        .blog-content p { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; flex: 1; }
+
+        .read-more-visual {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+        .read-more-visual i { margin-left: 5px; font-size: 0.8rem; transition: margin 0.3s; }
+        .blog-card:hover .read-more-visual i { margin-left: 8px; }
+    </style>
+</head>
+<body>
+
+   <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-img-link">
+                <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Anasayfa</a>
+                <a href="hakkimda.html">Hakkımda</a>
+                <div class="dropdown">
+                    <a href="calisma-alanlarim.html" class="dropbtn">Çalışma Alanlarım <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="hizmet-bireysel.html">Bireysel Terapi</a>
+                        <a href="hizmet-online.html">Online Terapi</a>
+                        <a href="hizmet-cocuk.html">Çocuk Terapisi</a>
+                        <a href="hizmet-ergen.html">Ergen Terapisi</a>
+                        <a href="hizmet-grup.html">Grup Terapisi</a>
+                        <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
+                    </div>
+                </div>
+                <a href="icerikler.html">İçerikler</a>
+                
+                <a href="blog.html">Blog</a>
+                <a href="sss.html">SSS</a>
+                <a href="iletisim.html">İletişim</a>
+                <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Blog</h1>
+        </div>
+    </div>
+
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-grid">
+                
+                <a href="blog-kaygi.html" class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kaygı">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt"></i> 24 Ocak 2024</span>
+                        <h3>Kaygı ile Nasıl Baş Ederiz?</h3>
+                        <p>Günlük hayatta yaşadığımız kaygının işlevsel yanları nelerdir? Ne zaman bir sorun haline gelir?</p>
+                        <span class="read-more-visual">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="blog-sinir.html" class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sınır Koymak">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt"></i> 10 Ocak 2024</span>
+                        <h3>İlişkilerde Sınır Koymak</h3>
+                        <p>Hayır diyebilmek bencillik midir? Sağlıklı sınırlar çizmek ilişkilere nasıl iyi gelir?</p>
+                        <span class="read-more-visual">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                <a href="blog-surec.html" class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Terapi Süreci">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt"></i> 28 Aralık 2023</span>
+                        <h3>Terapi Süreci Ne Kadar Sürer?</h3>
+                        <p>Terapiye başlarken en çok merak edilen sorulardan biri olan süreç ve seans sıklığı.</p>
+                        <span class="read-more-visual">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+                 <a href="blog-iletisim.html" class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Çift Terapisi">
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date"><i class="far fa-calendar-alt"></i> 15 Aralık 2023</span>
+                        <h3>Çift İlişkisinde İletişim Dili</h3>
+                        <p>Partnerinizle konuşurken "Sen" dili yerine "Ben" dili kullanmanın çatışmaları çözmedeki mucizevi etkisi.</p>
+                        <span class="read-more-visual">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col brand-col">
+                    <a href="index.html" style="display: inline-block;">
+                        <img src="images/logo.jpg" alt="Uzm. Klnk. Psk. Tuğba Yılmaz" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">
+                        Her hikaye biriciktir. Kendi hikayenizin kahramanı olmanız için çıktığınız bu yolda, profesyonel ve şefkatli bir rehberlik sunuyorum.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:iletisim@tugbayilmaz.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Hızlı Erişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="hakkimda.html">Hakkımda</a></li>
+                        <li><a href="calisma-alanlarim.html">Çalışma Alanlarım</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="#">KVKK & Gizlilik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col disclaimer-col">
+                    <h3>Yasal Uyarı</h3>
+                    <p class="disclaimer-text">
+                        Bu sitede paylaşılan bilgiler yalnızca bilgilendirme amaçlıdır. Tanı ve tedavi yerine geçmez. Herhangi bir sağlık sorununuz için lütfen uzman bir hekime başvurunuz. <br><br>
+                        Sitedeki içerikler Uzm. Klnk. Psk. Tuğba Yılmaz'a aittir.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Uzm. Klnk. Psk. Tuğba Yılmaz. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905312815738?text=Merhaba,%20randevu%20hakkında%20bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>

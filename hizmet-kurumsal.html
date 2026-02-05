@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurumsal Danışmanlık | Uzm. Klnk. Psk. Tuğba Yılmaz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images/favicon.JPG" type="image/png">
+    <style>
+        .page-header { background-color: var(--primary-color); color: white; padding: 50px 0; margin-top: 80px; text-align: center; }
+        .content-section { background-color: var(--bg-light); padding: 60px 0; min-height: 80vh; }
+        
+        .service-detail-box {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+            display: flex;
+            gap: 50px;
+            align-items: flex-start;
+        }
+
+        .service-img { flex: 0 0 400px; }
+        .service-img img { width: 100%; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+
+        .service-text { flex: 1; }
+        .service-text h2 { color: var(--primary-dark); margin-bottom: 20px; font-size: 1.8rem; }
+        .service-text h3 { color: #333; margin-top: 25px; margin-bottom: 15px; font-size: 1.2rem; border-bottom: 2px solid #eee; padding-bottom: 5px; display: inline-block; }
+        .service-text p { margin-bottom: 15px; font-size: 1rem; color: #555; line-height: 1.7; text-align: justify; }
+
+        .highlight-box {
+            background: #fdfdfd;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px 20px;
+            margin: 20px 0;
+            color: #444;
+            font-style: italic;
+        }
+
+        .check-list { list-style: none; margin-top: 10px; }
+        .check-list li { margin-bottom: 8px; color: #444; font-weight: 500; display: flex; align-items: flex-start; }
+        .check-list li i { color: var(--primary-color); margin-right: 12px; margin-top: 5px; font-size: 0.9rem; }
+
+        /* Kazanımlar Kutusu */
+        .gains-box {
+            background-color: var(--primary-dark);
+            color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .gains-box h4 { color: white; margin-bottom: 15px; font-size: 1.1rem; }
+        .gains-box ul li { color: rgba(255,255,255,0.9); margin-bottom: 5px; list-style: circle; margin-left: 20px; }
+
+        @media (max-width: 900px) { .service-detail-box { flex-direction: column; } .service-img { width: 100%; } }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-img-link">
+                <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
+            </a>
+            <nav class="nav-links">
+                <a href="index.html">Anasayfa</a>
+                <a href="hakkimda.html">Hakkımda</a>
+                <div class="dropdown">
+                    <a href="calisma-alanlarim.html" class="dropbtn">Çalışma Alanlarım <i class="fas fa-chevron-down" style="font-size:0.7rem; margin-left:5px;"></i></a>
+                    <div class="dropdown-content">
+                        <a href="hizmet-bireysel.html">Bireysel Terapi</a>
+                        <a href="hizmet-online.html">Online Terapi</a>
+                        <a href="hizmet-cocuk.html">Çocuk Terapisi</a>
+                        <a href="hizmet-ergen.html">Ergen Terapisi</a>
+                        <a href="hizmet-grup.html">Grup Terapisi</a>
+                        <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
+                    </div>
+                </div>
+                <a href="icerikler.html">İçerikler</a>
+                
+                <a href="blog.html">Blog</a>
+                <a href="sss.html">SSS</a>
+                <a href="iletisim.html">İletişim</a>
+                <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>Kurumsal Danışmanlık</h1>
+            <p>Verimli iş gücü, sağlıklı organizasyonel kültür ve güçlü liderlik.</p>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <div class="service-detail-box">
+                
+                <div class="service-img">
+                    <img src="images/kurumsal.jpeg" alt="Kurumsal Eğitim">
+                </div>
+
+                <div class="service-text">
+                    <h2>İş Dünyasında Psikolojik Sağlamlık</h2>
+                    <p>Kurumsal başarı; çalışanların psikolojik sağlığı, ekipler arası güven ve kapsayıcı bir çalışma ortamı ile doğrudan ilişkilidir. Klinik bilgi birikimini iş dünyasının dinamikleriyle birleştirerek; kurumların verimliliğini artırmaya ve çalışan bağlılığını güçlendirmeye yönelik profesyonel çözümler sunulmaktadır.</p>
+                    
+                    <h3>Eğitim ve Danışmanlık Başlıkları</h3>
+                    <ul class="check-list">
+                        <li><i class="fas fa-briefcase"></i> <strong>Psikolojik Dayanıklılık ve Stres Yönetimi:</strong> Kriz dönemlerinde çalışanların tükenmişlik riskini minimize etme stratejileri.</li>
+                        <li><i class="fas fa-comments"></i> <strong>Kurum İçi İletişim:</strong> Geri bildirim kültürünü yerleştirmek ve yapıcı çatışma yönetimi becerileri kazandırmak.</li>
+                        <li><i class="fas fa-universal-access"></i> <strong>Kapsayıcılık Çalışmaları:</strong> Çeşitliliği destekleyen ve engelli hakları konusunda farkındalık yaratan bir çalışma iklimi.</li>
+                        <li><i class="fas fa-chess-king"></i> <strong>Yönetim Psikolojisi ve Liderlik:</strong> Motivasyonel liderlik ve ekip dinamiklerini analiz etme becerileri.</li>
+                        <li><i class="fas fa-home"></i> <strong>Çalışan Destek Seminerleri:</strong> İş-özel hayat dengesine katkıda bulunmak için ebeveynlik ve aile içi iletişim destekleri.</li>
+                    </ul>
+
+                    <div class="gains-box">
+                        <h4><i class="fas fa-chart-line"></i> Kurumsal Kazanımlar</h4>
+                        <ul>
+                            <li><strong>Artan Verimlilik:</strong> Psikolojik refahı yüksek çalışanlarla performans artışı.</li>
+                            <li><strong>Güçlü Bağlılık:</strong> Değer gördüğünü hisseden çalışanlarda artan aidiyet.</li>
+                            <li><strong>Pozitif İklim:</strong> Güvene dayalı, düşük stresli çalışma ortamı.</li>
+                            <li><strong>Sosyal Prestij:</strong> Kapsayıcı yaklaşımlarla güçlenen marka imajı.</li>
+                        </ul>
+                    </div>
+
+                    <p style="margin-top: 30px;">
+                        <a href="iletisim.html" class="btn btn-primary">Randevu Oluştur</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col brand-col">
+                    <a href="index.html" style="display: inline-block;">
+                        <img src="images/logo.jpg" alt="Uzm. Klnk. Psk. Tuğba Yılmaz" class="footer-logo-img">
+                    </a>
+                    <p class="footer-desc">
+                        Her hikaye biriciktir. Kendi hikayenizin kahramanı olmanız için çıktığınız bu yolda, profesyonel ve şefkatli bir rehberlik sunuyorum.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="mailto:iletisim@tugbayilmaz.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col links-col">
+                    <h3>Hızlı Erişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="hakkimda.html">Hakkımda</a></li>
+                        <li><a href="calisma-alanlarim.html">Çalışma Alanlarım</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="iletisim.html">İletişim</a></li>
+                        <li><a href="#">KVKK & Gizlilik</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col disclaimer-col">
+                    <h3>Yasal Uyarı</h3>
+                    <p class="disclaimer-text">
+                        Bu sitede paylaşılan bilgiler yalnızca bilgilendirme amaçlıdır. Tanı ve tedavi yerine geçmez. Herhangi bir sağlık sorununuz için lütfen uzman bir hekime başvurunuz. <br><br>
+                        Sitedeki içerikler Uzm. Klnk. Psk. Tuğba Yılmaz'a aittir.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Uzm. Klnk. Psk. Tuğba Yılmaz. Tüm Hakları Saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/905312815738?text=Merhaba,%20randevu%20hakkında%20bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>
