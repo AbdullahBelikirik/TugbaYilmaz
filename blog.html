@@ -7,101 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/favicon.JPG" type="image/png">
-    <style>
-        /* BU SAYFAYA ÖZEL STİLLER */
-        .page-header {
-            background-color: var(--primary-color);
-            color: white;
-            /* YÜKSEKLİK AYARI: Eskiden 50px idi, 35px yaptık ki daha ince olsun */
-            padding: 35px 0; 
-            margin-top: 80px;
-            margin-bottom: 0;
-            text-align: center;
-        }
-        
-        /* Başlık ayarı: Altındaki boşluğu (margin-bottom) sıfırladık */
-        .page-header h1 { 
-            color: white; 
-            margin-bottom: 0; 
-            font-size: 2.2rem; 
-        }
-
-        .blog-section {
-            background-color: var(--bg-light); /* Krem Zemin */
-            padding: 60px 0;
-            min-height: 80vh;
-        }
-
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        /* KART TASARIMI */
-        .blog-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid rgba(0,0,0,0.03);
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-
-        .blog-img-box {
-            height: 220px;
-            overflow: hidden;
-        }
-        .blog-img-box img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .blog-card:hover .blog-img-box img { transform: scale(1.05); }
-
-        .blog-content {
-            padding: 25px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .blog-date {
-            font-size: 0.85rem;
-            color: #888;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .blog-date i { margin-right: 5px; color: var(--primary-color); }
-
-        .blog-content h3 { font-size: 1.3rem; margin-bottom: 15px; color: #333; line-height: 1.4; }
-        .blog-content p { color: #666; font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px; flex: 1; }
-
-        .read-more-visual {
-            color: var(--primary-color);
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            font-size: 0.95rem;
-        }
-        .read-more-visual i { margin-left: 5px; font-size: 0.8rem; transition: margin 0.3s; }
-        .blog-card:hover .read-more-visual i { margin-left: 8px; }
-    </style>
 </head>
 <body>
 
-   <header class="navbar">
+    <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo-img-link">
                 <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
@@ -121,8 +30,7 @@
                     </div>
                 </div>
                 <a href="icerikler.html">İçerikler</a>
-                
-                <a href="blog.html">Blog</a>
+                <a href="blog.html" style="color: var(--primary-color);">Blog</a>
                 <a href="sss.html">SSS</a>
                 <a href="iletisim.html">İletişim</a>
                 <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
@@ -132,61 +40,91 @@
 
     <div class="page-header">
         <div class="container">
-            <h1>Blog</h1>
+            <h1>Blog Yazıları</h1>
+            <p>Ruh sağlığı, psikoloji ve iyi oluş üzerine güncel paylaşımlar.</p>
         </div>
     </div>
 
-    <section class="blog-section">
+    <section class="section" style="background-color: #fff;">
         <div class="container">
             <div class="blog-grid">
                 
-                <a href="blog-kaygi.html" class="blog-card">
+                <article class="blog-card">
                     <div class="blog-img-box">
-                        <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kaygı">
+                        <img src="https://images.pexels.com/photos/3662667/pexels-photo-3662667.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Oyun Terapisi">
                     </div>
                     <div class="blog-content">
-                        <span class="blog-date"><i class="far fa-calendar-alt"></i> 24 Ocak 2024</span>
-                        <h3>Kaygı ile Nasıl Baş Ederiz?</h3>
-                        <p>Günlük hayatta yaşadığımız kaygının işlevsel yanları nelerdir? Ne zaman bir sorun haline gelir?</p>
-                        <span class="read-more-visual">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                        <h3>Çocuk Merkezli Oyun Terapisi</h3>
+                        <p>"Oyun çocuğun dili, oyuncaklar ise kelimeleridir." Çocuğun iç dünyasını anlamak için oyunun iyileştirici gücü.</p>
+                        <a href="blog-oyun-terapisi.html" class="read-more-btn">Devamını Oku</a>
                     </div>
-                </a>
+                </article>
 
-                <a href="blog-sinir.html" class="blog-card">
+                <article class="blog-card">
                     <div class="blog-img-box">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Sınır Koymak">
+                        <img src="https://images.pexels.com/photos/5676744/pexels-photo-5676744.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Ergenlik Dönemi">
                     </div>
                     <div class="blog-content">
-                        <span class="blog-date"><i class="far fa-calendar-alt"></i> 10 Ocak 2024</span>
-                        <h3>İlişkilerde Sınır Koymak</h3>
-                        <p>Hayır diyebilmek bencillik midir? Sağlıklı sınırlar çizmek ilişkilere nasıl iyi gelir?</p>
-                        <span class="read-more-visual">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                        <h3>"O Eski Çocuk Nerede?"</h3>
+                        <p>Ergenlikte kimlik dönemeci, bireyselleşme sancıları ve aile içi dengelerin yeniden inşası.</p>
+                        <a href="blog-ergenlik-kimlik.html" class="read-more-btn">Devamını Oku</a>
                     </div>
-                </a>
+                </article>
 
-                <a href="blog-surec.html" class="blog-card">
+                <article class="blog-card">
                     <div class="blog-img-box">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Terapi Süreci">
+                        <img src="https://images.pexels.com/photos/4098228/pexels-photo-4098228.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Boşanma Kararı">
                     </div>
                     <div class="blog-content">
-                        <span class="blog-date"><i class="far fa-calendar-alt"></i> 28 Aralık 2023</span>
-                        <h3>Terapi Süreci Ne Kadar Sürer?</h3>
-                        <p>Terapiye başlarken en çok merak edilen sorulardan biri olan süreç ve seans sıklığı.</p>
-                        <span class="read-more-visual">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                        <h3>"Boşanmalı mıyım?"</h3>
+                        <p>Terapide karar verme süreci, içsel çatışmalarla çalışmak ve ilişkinin geleceğini belirlemek üzerine.</p>
+                        <a href="blog-bosanma-karari.html" class="read-more-btn">Devamını Oku</a>
                     </div>
-                </a>
+                </article>
 
-                 <a href="blog-iletisim.html" class="blog-card">
+                <article class="blog-card">
                     <div class="blog-img-box">
-                        <img src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Çift Terapisi">
+                        <img src="https://images.pexels.com/photos/5699419/pexels-photo-5699419.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Psikoterapi Nedir">
                     </div>
                     <div class="blog-content">
-                        <span class="blog-date"><i class="far fa-calendar-alt"></i> 15 Aralık 2023</span>
-                        <h3>Çift İlişkisinde İletişim Dili</h3>
-                        <p>Partnerinizle konuşurken "Sen" dili yerine "Ben" dili kullanmanın çatışmaları çözmedeki mucizevi etkisi.</p>
-                        <span class="read-more-visual">Devamını Oku <i class="fas fa-arrow-right"></i></span>
+                        <h3>Tavsiye Değil, İçgörü</h3>
+                        <p>Psikoterapi neden tavsiye verme yeri değildir? Kendi içsel kaynaklarınızı keşfetme yolculuğu.</p>
+                        <a href="blog-psikoterapi-icgoru.html" class="read-more-btn">Devamını Oku</a>
                     </div>
-                </a>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="https://images.pexels.com/photos/3762800/pexels-photo-3762800.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Sınav Kaygısı">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Sınav Kaygısının Görünmeyen Dili</h3>
+                        <p>Kaygı sadece bir başarı meselesi mi, yoksa sevilme ve onaylanma ihtiyacının bir yansıması mı?</p>
+                        <a href="blog-sinav-kaygisi.html" class="read-more-btn">Devamını Oku</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="https://images.pexels.com/photos/4405247/pexels-photo-4405247.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Terapi Süresi">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Değişimin Ritmi ve Zamanı</h3>
+                        <p>Terapi neden haftalık olur? İyileşme süreci ne kadar sürer ve ne zaman biter?</p>
+                        <a href="blog-terapi-suresi.html" class="read-more-btn">Devamını Oku</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-img-box">
+                        <img src="https://images.pexels.com/photos/3662849/pexels-photo-3662849.jpeg?auto=compress&cs=tinysrgb&w=800" alt="DEHB ve Dikkat">
+                    </div>
+                    <div class="blog-content">
+                        <h3>Etiketlerin Ötesinde: DEHB</h3>
+                        <p>Çocuğun hareketliliği biyolojik bir sorun mu, yoksa ruhsal bir mesaj mı? Dikkat sorunlarına derinlemesine bakış.</p>
+                        <a href="blog-dehb-ve-dikkat.html" class="read-more-btn">Devamını Oku</a>
+                    </div>
+                </article>
 
             </div>
         </div>
@@ -204,9 +142,8 @@
                         Her hikaye biriciktir. Kendi hikayenizin kahramanı olmanız için çıktığınız bu yolda, profesyonel ve şefkatli bir rehberlik sunuyorum.
                     </p>
                     <div class="footer-socials">
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="mailto:iletisim@tugbayilmaz.com"><i class="fas fa-envelope"></i></a>
+                        <a href="https://www.instagram.com/klinikpsktugba/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:klinikpsikologtugbayilmaz@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
 
@@ -240,5 +177,6 @@
     <a href="https://wa.me/905312815738?text=Merhaba,%20randevu%20hakkında%20bilgi%20almak%20istiyorum." class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
+
 </body>
 </html>
