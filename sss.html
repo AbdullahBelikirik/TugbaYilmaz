@@ -129,7 +129,7 @@
                 <a href="icerikler.html">İçerikler</a>
                 
                 <a href="blog.html">Blog</a>
-                <a href="sss.html">SSS</a>
+                <a href="sss.html">Sıkça Sorulan Sorular</a>
                 <a href="iletisim.html">İletişim</a>
                 <a href="iletisim.html" class="btn btn-primary">Randevu Al</a>
             </nav>
@@ -315,19 +315,40 @@
     </footer>
 
     <script>
-        const faqQuestions = document.querySelectorAll('.faq-question');
+        const faqItems = document.querySelectorAll(".faq-item");
 
-        faqQuestions.forEach(question => {
-            question.addEventListener('click', () => {
-                const item = question.parentElement;
-                
-                if (item.classList.contains('active')) {
-                    item.classList.remove('active');
-                } else {
-                    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
-                    item.classList.add('active');
+        faqItems.forEach(item => {
+            const question = item.querySelector(".faq-question");
+
+            question.addEventListener("click", () => {
+                const isActive = item.classList.contains("active");
+
+                document.querySelectorAll(".faq-item").forEach(otherItem => {
+                    otherItem.classList.remove("active");
+                });
+
+                if (!isActive) {
+                    item.classList.add("active");
+
+                    setTimeout(() => {
+                        const headerOffset = 100;
+                        const elementPosition = item.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: "smooth"
+                        });
+                    }, 300);
                 }
             });
+        });
+
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
         });
     </script>
 
