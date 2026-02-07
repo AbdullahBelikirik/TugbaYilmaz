@@ -14,6 +14,9 @@
             <a href="index.html" class="logo-img-link">
                 <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
             </a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
             <nav class="nav-links">
                 <a href="index.html" style="color: var(--primary-color);">Anasayfa</a>
                 <a href="hakkimda.html">Hakkımda</a>
@@ -70,9 +73,6 @@
                 <h2 style="font-size: 2.2rem; margin-bottom: 20px; color: var(--primary-dark);">Merhaba, Ben Tuğba Yılmaz</h2>
                 <p style="margin-bottom: 25px; color: #555; font-size: 1.05rem; line-height: 1.8;">
                     Lisans eğitimini Yıldız Teknik Üniversitesi Psikolojik Danışmanlık ve Rehberlik bölümünde tamamlayan Tuğba Yılmaz, klinik psikoloji uzmanlığını Rumeli Üniversitesi Klinik Psikoloji yüksek lisans programı ile almıştır. Akademik gelişimi süresince, teorik bilgisini klinik pratikle birleştirmek adına iki yıl boyunca bir psikiyatrist eşliğinde çok sayıda klinik vaka gözlemlemiş ve staj süreçlerini başarıyla tamamlamıştır.
-                </p>
-                <p style="margin-bottom: 25px; color: #555; font-size: 1.05rem; line-height: 1.8;">
-                    Üniversite eğitimi boyunca alanın sadece teorik değil, sosyal ve uygulama boyutlarında da aktif bir rol üstlenmiştir. Türkan Sabancı Görme Engelliler Okulu ve Rehberlik Araştırma Merkezi'nde (RAM) saha çalışmalarını yürütmüştür. Aynı zamanda Yıldız Teknik Üniversitesi Psikolojik Danışmanlık Kulübü'nün kuruculuğunu yapmış ve görme engelli bireylere yönelik hazırlanan "Cinsel Engelleri Aşıyorum" projesinde koordinatörlük görevini üstlenerek sosyal sorumluluk projelerine liderlik etmiştir.
                 </p>
                 <a href="hakkimda.html" class="btn btn-primary">Devamını Oku</a>
             </div>
@@ -289,5 +289,13 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
