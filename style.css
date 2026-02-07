@@ -1344,12 +1344,26 @@ textarea.form-control {
 }
 
 @media (max-width: 900px) {
-    .container { width: 90%; }
-    .section { padding: 50px 0; }
-    h1 { font-size: 1.8rem; }
-    h2 { font-size: 1.5rem; }
+    .container {
+        width: 90%;
+    }
 
-    .hamburger { display: block; z-index: 1002; }
+    .section {
+        padding: 50px 0;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1002;
+    }
 
     .nav-links {
         position: fixed;
@@ -1357,35 +1371,37 @@ textarea.form-control {
         right: 0;
         height: calc(100vh - 80px);
         background: #ffffff;
-        
         width: 75% !important;
         max-width: 280px !important;
-        
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding-top: 10px;
-        
+        padding-top: 0;
+        gap: 0 !important;
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
-        
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1); 
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
         border-left: 1px solid #eee;
         overflow-y: auto;
         z-index: 1001;
     }
 
-    .nav-links.active { transform: translateX(0%); }
+    .nav-links.active {
+        transform: translateX(0%);
+    }
 
-    .nav-links > a, .dropbtn {
+    .nav-links > a,
+    .dropbtn {
         width: 100%;
         justify-content: flex-start;
         padding: 15px 25px;
         font-size: 1rem;
-        border-bottom: 1px solid #f9f9f9;
+        border-bottom: 1px solid #f5f5f5;
         color: #333;
+        margin: 0;
+        display: block;
     }
-    
+
     .nav-links > a:hover {
         background-color: var(--bg-light);
         color: var(--primary-color);
@@ -1399,33 +1415,52 @@ textarea.form-control {
         text-align: center;
     }
 
-    
-    .dropdown-content {
-        display: none !important;
-    }
-    
-    .dropdown:hover .dropdown-content {
-        display: none !important;
-    }
-
     .dropdown {
         width: 100%;
-        display: block; 
+        display: block;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none;
+        background: transparent;
     }
 
-    .fa-chevron-down {
+    .dropdown .dropbtn {
+        width: 100%;
+        padding: 15px 25px;
+        border-bottom: 1px solid #f5f5f5;
+    }
+
+    .dropdown-content,
+    .dropdown i {
         display: none !important;
     }
 
-    .hero-container { flex-direction: column-reverse; text-align: center; }
-    .preview-grid, .blog-grid, .footer-grid, .contact-info-wrapper, .service-detail-box {
+    .hero-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .preview-grid,
+    .blog-grid,
+    .footer-grid,
+    .contact-info-wrapper,
+    .service-detail-box {
         grid-template-columns: 1fr;
         flex-direction: column;
         gap: 30px;
     }
-    .service-img { width: 100%; }
-    .footer { text-align: center; }
-    .footer-socials { justify-content: center; }
+
+    .service-img {
+        width: 100%;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
