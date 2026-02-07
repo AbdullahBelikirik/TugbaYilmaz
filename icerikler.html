@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İçerikler (Instagram) | Uzm. Klnk. Psk. Tuğba Yılmaz</title>
+    <title>Sosyal Medya (Instagram) | Uzm. Klnk. Psk. Tuğba Yılmaz</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/favicon.JPG" type="image/png">
@@ -29,7 +29,7 @@
                         <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
                     </div>
                 </div>
-                <a href="icerikler.html" style="color: var(--primary-color);">İçerikler</a>
+                <a href="icerikler.html" style="color: var(--primary-color);">Sosyal Medya</a>
                 <a href="blog.html">Blog</a>
                 <a href="sss.html">Sıkça Sorulan Sorular</a>
                 <a href="iletisim.html">İletişim</a>
@@ -171,5 +171,13 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>

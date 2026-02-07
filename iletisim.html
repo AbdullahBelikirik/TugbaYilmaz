@@ -29,7 +29,7 @@
                         <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
                     </div>
                 </div>
-                <a href="icerikler.html">İçerikler</a>
+                <a href="icerikler.html">Sosyal Medya</a>
                 <a href="blog.html">Blog</a>
                 <a href="sss.html">Sıkça Sorulan Sorular</a>
                 <a href="iletisim.html" style="color: var(--primary-color);">İletişim</a>
@@ -149,5 +149,13 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+
+        hamburger.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </body>
 </html>
