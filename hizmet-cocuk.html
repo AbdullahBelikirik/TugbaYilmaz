@@ -7,74 +7,17 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/favicon.JPG" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        /* BU SAYFAYA ÖZEL TURUNCU TEMA AYARLARI */
-        .page-header { background-color: var(--primary-color); color: white; padding: 50px 0; margin-top: 80px; text-align: center; }
-        .content-section { background-color: var(--bg-light); padding: 60px 0; min-height: 80vh; }
-        
-        /* Sayfa içindeki TÜM başlıklar Fredoka olsun (Sorun Çözüldü) */
-        h1, h2, h3 {
-            font-family: 'Fredoka', sans-serif !important;
-            letter-spacing: 0.5px;
-        }
-
-        .service-detail-box {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-            display: flex;
-            gap: 50px;
-            align-items: flex-start;
-            border-bottom: 5px solid var(--primary-color);
-        }
-
-        .service-img { flex: 0 0 400px; }
-        .service-img img { width: 100%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transform: rotate(-2deg); transition: transform 0.3s; border: 5px solid white; }
-        .service-detail-box:hover .service-img img { transform: rotate(0deg); }
-
-        .service-text { flex: 1; }
-        
-        .service-text h2 { 
-            color: var(--primary-dark); 
-            margin-bottom: 20px; 
-            font-size: 1.8rem; 
-        }
-
-        .service-text h3 {
-            color: #d35400; /* Alt başlığı hafif turuncu yaptım, çok şık durur */
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .service-text p { margin-bottom: 15px; font-size: 1rem; color: #555; line-height: 1.7; text-align: justify; }
-
-        .highlight-box {
-            background: #fff5e6;
-            border-left: 4px solid var(--primary-color);
-            padding: 15px 20px;
-            margin: 20px 0;
-            color: #d35400;
-            font-weight: 500;
-        }
-
-        .check-list { list-style: none; margin-top: 20px; }
-        .check-list li { margin-bottom: 10px; color: #444; font-weight: 600; display: flex; align-items: center; }
-        .check-list li i { color: var(--primary-color); margin-right: 12px; font-size: 1.1rem; }
-
-        @media (max-width: 900px) { .service-detail-box { flex-direction: column; } .service-img { width: 100%; transform: none; } .service-img img { transform: none; } }
-    </style>
 </head>
-<body class="theme-child">
+<body>
 
     <header class="navbar">
         <div class="container nav-container">
             <a href="index.html" class="logo-img-link">
                 <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
             </a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
             <nav class="nav-links">
                 <a href="index.html">Anasayfa</a>
                 <a href="hakkimda.html">Hakkımda</a>
@@ -89,8 +32,7 @@
                         <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
                     </div>
                 </div>
-                <a href="icerikler.html">Sosyal Medya</a>
-                
+                <a href="icerikler.html">İçerikler</a>
                 <a href="blog.html">Blog</a>
                 <a href="sss.html">Sıkça Sorulan Sorular</a>
                 <a href="iletisim.html">İletişim</a>
@@ -106,7 +48,7 @@
         </div>
     </div>
 
-    <section class="content-section">
+    <section class="section" style="background-color: var(--bg-light);">
         <div class="container">
             <div class="service-detail-box">
                 
@@ -123,7 +65,7 @@
                         "Özellikle rehabilitasyon geçmişi ve deneyimi ile özel gereksinimli çocukların psikososyal gelişim süreçleri uzmanlık düzeyinde takip edilmektedir."
                     </div>
 
-                    <h3>Hangi Durumlarda Başvurulur?</h3>
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-dark);">Hangi Durumlarda Başvurulur?</h3>
                     <ul class="check-list">
                         <li><i class="fas fa-puzzle-piece"></i> Duygu düzenleme sorunları, öfke patlamaları ve saldırganlık</li>
                         <li><i class="fas fa-puzzle-piece"></i> Korkular, kaygılar ve ayrılık anksiyetesi</li>

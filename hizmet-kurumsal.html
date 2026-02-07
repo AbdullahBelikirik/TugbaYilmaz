@@ -7,54 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/favicon.JPG" type="image/png">
-    <style>
-        .page-header { background-color: var(--primary-color); color: white; padding: 50px 0; margin-top: 80px; text-align: center; }
-        .content-section { background-color: var(--bg-light); padding: 60px 0; min-height: 80vh; }
-        
-        .service-detail-box {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-            display: flex;
-            gap: 50px;
-            align-items: flex-start;
-        }
-
-        .service-img { flex: 0 0 400px; }
-        .service-img img { width: 100%; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-        .service-text { flex: 1; }
-        .service-text h2 { color: var(--primary-dark); margin-bottom: 20px; font-size: 1.8rem; }
-        .service-text h3 { color: #333; margin-top: 25px; margin-bottom: 15px; font-size: 1.2rem; border-bottom: 2px solid #eee; padding-bottom: 5px; display: inline-block; }
-        .service-text p { margin-bottom: 15px; font-size: 1rem; color: #555; line-height: 1.7; text-align: justify; }
-
-        .highlight-box {
-            background: #fdfdfd;
-            border-left: 4px solid var(--primary-color);
-            padding: 15px 20px;
-            margin: 20px 0;
-            color: #444;
-            font-style: italic;
-        }
-
-        .check-list { list-style: none; margin-top: 10px; }
-        .check-list li { margin-bottom: 8px; color: #444; font-weight: 500; display: flex; align-items: flex-start; }
-        .check-list li i { color: var(--primary-color); margin-right: 12px; margin-top: 5px; font-size: 0.9rem; }
-
-        /* Kazanımlar Kutusu */
-        .gains-box {
-            background-color: var(--primary-dark);
-            color: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 30px;
-        }
-        .gains-box h4 { color: white; margin-bottom: 15px; font-size: 1.1rem; }
-        .gains-box ul li { color: rgba(255,255,255,0.9); margin-bottom: 5px; list-style: circle; margin-left: 20px; }
-
-        @media (max-width: 900px) { .service-detail-box { flex-direction: column; } .service-img { width: 100%; } }
-    </style>
 </head>
 <body>
 
@@ -63,6 +15,9 @@
             <a href="index.html" class="logo-img-link">
                 <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
             </a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
             <nav class="nav-links">
                 <a href="index.html">Anasayfa</a>
                 <a href="hakkimda.html">Hakkımda</a>
@@ -77,8 +32,7 @@
                         <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
                     </div>
                 </div>
-                <a href="icerikler.html">Sosyal Medya</a>
-                
+                <a href="icerikler.html">İçerikler</a>
                 <a href="blog.html">Blog</a>
                 <a href="sss.html">Sıkça Sorulan Sorular</a>
                 <a href="iletisim.html">İletişim</a>
@@ -94,7 +48,7 @@
         </div>
     </div>
 
-    <section class="content-section">
+    <section class="section" style="background-color: var(--bg-light);">
         <div class="container">
             <div class="service-detail-box">
                 
@@ -106,8 +60,8 @@
                     <h2>İş Dünyasında Psikolojik Sağlamlık</h2>
                     <p>Kurumsal başarı; çalışanların psikolojik sağlığı, ekipler arası güven ve kapsayıcı bir çalışma ortamı ile doğrudan ilişkilidir. Klinik bilgi birikimini iş dünyasının dinamikleriyle birleştirerek; kurumların verimliliğini artırmaya ve çalışan bağlılığını güçlendirmeye yönelik profesyonel çözümler sunulmaktadır.</p>
                     
-                    <h3>Eğitim ve Danışmanlık Başlıkları</h3>
-                    <ul class="check-list">
+                    <h3 style="margin-top: 25px; margin-bottom: 15px; font-size: 1.2rem; color: #333; border-bottom: 2px solid #eee; padding-bottom: 5px; display: inline-block;">Eğitim ve Danışmanlık Başlıkları</h3>
+                    <ul class="check-list" style="margin-top: 10px;">
                         <li><i class="fas fa-briefcase"></i> <strong>Psikolojik Dayanıklılık ve Stres Yönetimi:</strong> Kriz dönemlerinde çalışanların tükenmişlik riskini minimize etme stratejileri.</li>
                         <li><i class="fas fa-comments"></i> <strong>Kurum İçi İletişim:</strong> Geri bildirim kültürünü yerleştirmek ve yapıcı çatışma yönetimi becerileri kazandırmak.</li>
                         <li><i class="fas fa-universal-access"></i> <strong>Kapsayıcılık Çalışmaları:</strong> Çeşitliliği destekleyen ve engelli hakları konusunda farkındalık yaratan bir çalışma iklimi.</li>
@@ -115,13 +69,13 @@
                         <li><i class="fas fa-home"></i> <strong>Çalışan Destek Seminerleri:</strong> İş-özel hayat dengesine katkıda bulunmak için ebeveynlik ve aile içi iletişim destekleri.</li>
                     </ul>
 
-                    <div class="gains-box">
-                        <h4><i class="fas fa-chart-line"></i> Kurumsal Kazanımlar</h4>
-                        <ul>
-                            <li><strong>Artan Verimlilik:</strong> Psikolojik refahı yüksek çalışanlarla performans artışı.</li>
-                            <li><strong>Güçlü Bağlılık:</strong> Değer gördüğünü hisseden çalışanlarda artan aidiyet.</li>
-                            <li><strong>Pozitif İklim:</strong> Güvene dayalı, düşük stresli çalışma ortamı.</li>
-                            <li><strong>Sosyal Prestij:</strong> Kapsayıcı yaklaşımlarla güçlenen marka imajı.</li>
+                    <div style="background-color: var(--primary-dark); color: white; border-radius: 8px; padding: 20px; margin-top: 30px;">
+                        <h4 style="color: white; margin-bottom: 15px; font-size: 1.1rem;"><i class="fas fa-chart-line"></i> Kurumsal Kazanımlar</h4>
+                        <ul style="list-style: inside circle; margin-left: 10px;">
+                            <li style="margin-bottom: 5px;"><strong>Artan Verimlilik:</strong> Psikolojik refahı yüksek çalışanlarla performans artışı.</li>
+                            <li style="margin-bottom: 5px;"><strong>Güçlü Bağlılık:</strong> Değer gördüğünü hisseden çalışanlarda artan aidiyet.</li>
+                            <li style="margin-bottom: 5px;"><strong>Pozitif İklim:</strong> Güvene dayalı, düşük stresli çalışma ortamı.</li>
+                            <li style="margin-bottom: 5px;"><strong>Sosyal Prestij:</strong> Kapsayıcı yaklaşımlarla güçlenen marka imajı.</li>
                         </ul>
                     </div>
 

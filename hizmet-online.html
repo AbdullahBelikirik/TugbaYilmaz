@@ -7,41 +7,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/favicon.JPG" type="image/png">
-    <style>
-        .page-header { background-color: var(--primary-color); color: white; padding: 50px 0; margin-top: 80px; text-align: center; }
-        .content-section { background-color: var(--bg-light); padding: 60px 0; min-height: 80vh; }
-        
-        .service-detail-box {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.05);
-            display: flex;
-            gap: 50px;
-            align-items: center; /* Resmi dikeyde ortalar */
-        }
-
-        .service-img { flex: 0 0 400px; }
-        .service-img img { width: 100%; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-        .service-text { flex: 1; }
-        .service-text h2 { color: var(--primary-dark); margin-bottom: 20px; font-size: 1.8rem; }
-        .service-text p { margin-bottom: 15px; font-size: 1rem; color: #555; line-height: 1.7; text-align: justify; }
-
-        .highlight-box {
-            background: #eef6fc; /* Mavi tonlu hafif zemin */
-            border-left: 4px solid #3498db;
-            padding: 15px 20px;
-            margin: 20px 0;
-            color: #444;
-        }
-
-        .check-list { list-style: none; margin-top: 20px; }
-        .check-list li { margin-bottom: 10px; color: #444; font-weight: 500; display: flex; align-items: center; }
-        .check-list li i { color: var(--primary-color); margin-right: 12px; font-size: 0.9rem; }
-
-        @media (max-width: 900px) { .service-detail-box { flex-direction: column; } .service-img { width: 100%; } }
-    </style>
 </head>
 <body>
 
@@ -50,6 +15,9 @@
             <a href="index.html" class="logo-img-link">
                 <img src="images/logo.jpg" alt="Klnk. Psk. Tuğba Yılmaz" class="nav-logo">
             </a>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
             <nav class="nav-links">
                 <a href="index.html">Anasayfa</a>
                 <a href="hakkimda.html">Hakkımda</a>
@@ -64,8 +32,7 @@
                         <a href="hizmet-kurumsal.html">Kurumsal Danışmanlık</a>
                     </div>
                 </div>
-                <a href="icerikler.html">Sosyal Medya</a>
-                
+                <a href="icerikler.html">İçerikler</a>
                 <a href="blog.html">Blog</a>
                 <a href="sss.html">Sıkça Sorulan Sorular</a>
                 <a href="iletisim.html">İletişim</a>
@@ -81,7 +48,7 @@
         </div>
     </div>
 
-    <section class="content-section">
+    <section class="section" style="background-color: var(--bg-light);">
         <div class="container">
             <div class="service-detail-box">
                 
@@ -98,7 +65,7 @@
                         "Yüz yüze terapideki etik ilkeler ve terapötik standartlar, dijital platformlar üzerinden aynı disiplinle sürdürülmektedir."
                     </div>
 
-                    <h3>Hangi Durumlarda Tercih Edilir?</h3>
+                    <h3 style="margin-top: 30px; margin-bottom: 15px; color: var(--primary-dark);">Hangi Durumlarda Tercih Edilir?</h3>
                     <ul class="check-list">
                         <li><i class="fas fa-check"></i> Farklı şehirlerde veya yurt dışında yaşanması durumunda</li>
                         <li><i class="fas fa-check"></i> Yoğun iş temposu nedeniyle klinik randevularına zaman ayrılamadığında</li>
