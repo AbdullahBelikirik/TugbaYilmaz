@@ -1343,89 +1343,98 @@ textarea.form-control {
     color: #666;
 }
 
-/* --- MOBİL UYUMLULUK (MEDIA QUERIES - GÜNCELLENDİ) --- */
 @media (max-width: 900px) {
-    /* Genel Ayarlar */
     .container { width: 90%; }
     .section { padding: 50px 0; }
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.6rem; }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
 
-    /* İkonu Mobilde Göster */
     .hamburger { display: block; }
 
-    /* Menüyü Gizle ve Yana Kaydır */
     .nav-links {
         position: fixed;
         top: 80px;
         right: 0;
-        height: calc(100vh - 80px);
+        height: calc(100vh - 80px); 
         background: white;
         flex-direction: column;
-        width: 100%;
-        align-items: center;
+        width: 260px;
+        align-items: flex-start;
         justify-content: flex-start;
-        padding-top: 40px;
-        transform: translateX(100%); /* Ekran dışına it */
-        transition: transform 0.3s ease-in-out;
-        border-top: 1px solid #eee;
+        padding-top: 20px;
+        transform: translateX(100%); 
+        transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0); 
+        border-left: 1px solid #eee; 
+        box-shadow: -5px 0 15px rgba(0,0,0,0.05); 
         overflow-y: auto;
     }
 
-    /* Menü Açılınca */
     .nav-links.active { transform: translateX(0%); }
 
-    /* Mobilde Link Görünümü */
     .nav-links > a, .dropbtn {
         width: 100%;
-        justify-content: center;
-        padding: 20px;
-        font-size: 1.2rem;
-        border-bottom: 1px solid #f9f9f9;
+        justify-content: flex-start; 
+        padding: 12px 25px; 
+        font-size: 1rem;
+        border-bottom: 1px solid #fcfcfc;
+        color: #444;
+    }
+    
+    .nav-links > a:hover {
+        background-color: var(--bg-light);
+        color: var(--primary-color);
+        padding-left: 30px; 
     }
 
-    /* Mobilde Buton Görünümü */
     .navbar .btn {
-        margin: 20px 0 !important;
-        width: 80%;
-        text-align: center;
+        margin: 20px 25px !important;
+        width: auto;
+        display: inline-block;
+        font-size: 0.9rem;
+        padding: 10px 20px !important;
     }
 
-    /* Mobilde Dropdown */
     .dropdown {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start; 
     }
     
     .dropdown-content {
         position: static;
         box-shadow: none;
         width: 100%;
-        text-align: center;
-        background-color: #fcfcfc;
+        text-align: left;
+        background-color: #f9f9f9;
         display: none;
-        padding: 10px 0;
+        padding: 5px 0;
+        border-top: none;
+    }
+    
+    .dropdown-content a {
+        padding-left: 40px; 
+        font-size: 0.9rem;
     }
     
     .dropdown:hover .dropdown-content { display: block; }
 
-    /* Diğer Bölümler */
     .hero-container {
         flex-direction: column-reverse;
         align-items: center;
         text-align: center;
     }
-    .hero-logo { margin: 0 auto 30px auto; max-width: 280px; margin-top: 0; }
+    .hero-logo { margin: 0 auto 30px auto; max-width: 250px; margin-top: 0; }
     .hero-btns { justify-content: center; }
-    .hero-section { background: var(--bg-light); }
+    .hero-section { background: var(--bg-light); padding-top: 120px; }
     .nav-logo { max-height: 40px; }
+    
     .preview-grid, .blog-grid, .footer-grid, .contact-info-wrapper, .service-detail-box {
         grid-template-columns: 1fr;
         flex-direction: column;
         gap: 30px;
     }
+    
     .footer-socials { justify-content: center; }
     .footer { border-radius: 30px 30px 0 0; text-align: center; }
     .service-img { width: 100%; flex: auto; }
