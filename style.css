@@ -1343,6 +1343,29 @@ textarea.form-control {
     color: #666;
 }
 
+.home-about-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+@media (max-width: 900px) {
+    .home-about-section {
+        flex-direction: column !important;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .home-about-section > div {
+        width: 100%;
+    }
+
+    .home-about-section img {
+        max-width: 280px;
+        margin: 0 auto 30px auto;
+    }
+}
+
 @media (max-width: 900px) {
     .container {
         width: 90%;
