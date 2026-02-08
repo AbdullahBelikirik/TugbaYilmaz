@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="../images/favicon.JPG" type="image/png">
+    <style>
+        .check-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .check-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .check-list li i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            width: 25px;
+            text-align: center;
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+
+        .check-list li span {
+            flex: 1;
+        }
+    </style>
 </head>
 <body>
 
@@ -61,12 +89,28 @@
                     <p>Kurumsal başarı; çalışanların psikolojik sağlığı, ekipler arası güven ve kapsayıcı bir çalışma ortamı ile doğrudan ilişkilidir. Klinik bilgi birikimini iş dünyasının dinamikleriyle birleştirerek; kurumların verimliliğini artırmaya ve çalışan bağlılığını güçlendirmeye yönelik profesyonel çözümler sunulmaktadır.</p>
                     
                     <h3 style="margin-top: 25px; margin-bottom: 15px; font-size: 1.2rem; color: #333; border-bottom: 2px solid #eee; padding-bottom: 5px; display: inline-block;">Eğitim ve Danışmanlık Başlıkları</h3>
-                    <ul class="check-list" style="margin-top: 10px;">
-                        <li><i class="fas fa-briefcase"></i> <strong>Psikolojik Dayanıklılık ve Stres Yönetimi:</strong> Kriz dönemlerinde çalışanların tükenmişlik riskini minimize etme stratejileri.</li>
-                        <li><i class="fas fa-comments"></i> <strong>Kurum İçi İletişim:</strong> Geri bildirim kültürünü yerleştirmek ve yapıcı çatışma yönetimi becerileri kazandırmak.</li>
-                        <li><i class="fas fa-universal-access"></i> <strong>Kapsayıcılık Çalışmaları:</strong> Çeşitliliği destekleyen ve engelli hakları konusunda farkındalık yaratan bir çalışma iklimi.</li>
-                        <li><i class="fas fa-chess-king"></i> <strong>Yönetim Psikolojisi ve Liderlik:</strong> Motivasyonel liderlik ve ekip dinamiklerini analiz etme becerileri.</li>
-                        <li><i class="fas fa-home"></i> <strong>Çalışan Destek Seminerleri:</strong> İş-özel hayat dengesine katkıda bulunmak için ebeveynlik ve aile içi iletişim destekleri.</li>
+                    
+                    <ul class="check-list">
+                        <li>
+                            <i class="fas fa-briefcase"></i>
+                            <span><strong>Psikolojik Dayanıklılık ve Stres Yönetimi:</strong> Kriz dönemlerinde çalışanların tükenmişlik riskini minimize etme stratejileri.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-comments"></i>
+                            <span><strong>Kurum İçi İletişim:</strong> Geri bildirim kültürünü yerleştirmek ve yapıcı çatışma yönetimi becerileri kazandırmak.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-universal-access"></i>
+                            <span><strong>Kapsayıcılık Çalışmaları:</strong> Çeşitliliği destekleyen ve engelli hakları konusunda farkındalık yaratan bir çalışma iklimi.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-chess-king"></i>
+                            <span><strong>Yönetim Psikolojisi ve Liderlik:</strong> Motivasyonel liderlik ve ekip dinamiklerini analiz etme becerileri.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-home"></i>
+                            <span><strong>Çalışan Destek Seminerleri:</strong> İş-özel hayat dengesine katkıda bulunmak için ebeveynlik ve aile içi iletişim destekleri.</span>
+                        </li>
                     </ul>
 
                     <div style="background-color: var(--primary-dark); color: white; border-radius: 8px; padding: 20px; margin-top: 30px;">
@@ -92,7 +136,6 @@
         <footer class="footer">
             <div class="container">
                 <div class="footer-grid">
-                    
                     <div class="footer-col brand-col">
                         <a href="../" style="display: inline-block;">
                             <img src="../images/logo.jpg" alt="Uzm. Klnk. Psk. Tuğba Yılmaz" class="footer-logo-img">
@@ -105,7 +148,6 @@
                             <a href="mailto:klinikpsikologtugbayilmaz@gmail.com"><i class="fas fa-envelope"></i></a>
                         </div>
                     </div>
-
                     <div class="footer-col links-col">
                         <h3>Hızlı Erişim</h3>
                         <ul class="footer-links">
@@ -116,7 +158,6 @@
                             <li><a href="#">KVKK & Gizlilik</a></li>
                         </ul>
                     </div>
-
                     <div class="footer-col disclaimer-col">
                         <h3>Yasal Uyarı</h3>
                         <p class="disclaimer-text">
@@ -124,9 +165,7 @@
                             Sitedeki içerikler Uzm. Klnk. Psk. Tuğba Yılmaz'a aittir.
                         </p>
                     </div>
-
                 </div>
-
                 <div class="footer-bottom">
                     <p>&copy; 2026 Uzm. Klnk. Psk. Tuğba Yılmaz. Tüm Hakları Saklıdır.</p>
                 </div>
