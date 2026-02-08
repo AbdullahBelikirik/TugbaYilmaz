@@ -9,11 +9,12 @@
     <link rel="icon" href="images/favicon.JPG" type="image/png">
     <style>
         
+        /* Ana başlık (Hakkımda) stili */
         .page-header {
             background-color: var(--primary-color);
             color: white;
             padding: 35px 0;
-            margin-top: 80px;
+            margin-top: 80px; /* Navbar yüksekliği kadar boşluk */
             text-align: center;
         }
         .page-header h1 { margin-bottom: 0; font-size: 2.2rem; color: white; }
@@ -30,8 +31,10 @@
             align-items: flex-start;
         }
 
+        /* SOL SÜTUN (Resim ve Logo) AYARI */
         .about-left-col {
             flex: 0 0 380px;
+            margin-top: 0; 
         }
 
         .about-img-box img {
@@ -42,14 +45,32 @@
             display: block;
         }
 
+        /* --- ÖZEL AYAR: BURADAKİ AUTHOR-BOX'I KÜÇÜLT --- */
+        /* Normalde author-box geniştir, burada sadece logoyu sarmasını istiyoruz */
+        .about-left-col .author-box {
+            width: fit-content; /* İçerik (logo) kadar genişle */
+            margin: 30px auto 0 auto; /* Üstten boşluk bırak ve ortala */
+            padding: 15px 25px; /* İç boşluğu azalt */
+            text-align: center; /* Logoyu ortala */
+            display: flex;
+            justify-content: center; /* Flex kullanılıyorsa ortala */
+        }
+
+        /* Kutunun içindeki logonun boyutu */
+        .about-left-col .author-box img {
+            max-width: 180px;
+            height: auto;
+            display: block;
+            margin: 0; /* Author box'tan gelen margin varsa sıfırla */
+        }
+        /* -------------------------------------------------- */
+
+        /* SAĞ SÜTUN (Yazı Alanı) AYARI */
         .about-right-col {
             flex: 1;
+            margin-top: 0; 
         }
-        .about-right-col h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
+
         .about-right-col p {
             margin-bottom: 20px;
             line-height: 1.8;
@@ -58,23 +79,13 @@
             font-size: 1.05rem;
         }
 
-        .quote-box {
-            border-left: 4px solid var(--primary-color);
-            background: rgba(255,255,255,0.6);
-            padding: 20px 25px;
-            margin: 30px 0;
-            font-style: italic;
-            color: #666;
-            font-size: 1.1rem;
-            border-radius: 0 10px 10px 0;
-        }
-
+        /* Eğitim Alanı Stilleri */
         .education-grid-section {
             background-color: var(--primary-dark); 
             color: white;
             padding: 60px 40px;
             border-radius: 16px;
-            margin-top: 50px;
+            margin-top: 80px;
             text-align: center;
         }
 
@@ -142,7 +153,10 @@
 
         @media (max-width: 900px) {
             .about-container { flex-direction: column; }
-            .about-left-col { width: 100%; max-width: 400px; margin: 0 auto; }
+            .about-left-col { width: 100%; max-width: 400px; margin: 0 auto; margin-top: 0; }
+            /* Mobilde de ortalı kalsın */
+            .about-left-col .author-box { margin: 25px auto 30px auto; }
+            .about-right-col { margin-top: 30px; } 
             .education-grid-section { padding: 40px 20px; }
         }
     </style>
@@ -194,10 +208,13 @@
                 <div class="about-img-box">
                     <img src="images/tugba1.jpeg" alt="Uzm. Klnk. Psk. Tuğba Yılmaz">
                 </div>
+                
+                <div class="author-box">
+                    <img src="images/logo.jpg" alt="Tuğba Yılmaz Logo">
+                </div>
             </div>
 
-            <div class="about-right-col" style="background-color: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
-                <h2>Uzm. Klnk. Psk. Tuğba Yılmaz</h2>
+            <div class="about-right-col" style="background-color: white; padding: 40px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0,0,0,0.05);">
                 
                 <p>Lisans eğitimini Yıldız Teknik Üniversitesi Psikolojik Danışmanlık ve Rehberlik bölümünde tamamlayan Tuğba Yılmaz, klinik psikoloji uzmanlığını Rumeli Üniversitesi Klinik Psikoloji yüksek lisans programı ile almıştır. Akademik gelişimi süresince, teorik bilgisini klinik pratikle birleştirmek adına iki yıl boyunca bir psikiyatrist eşliğinde çok sayıda klinik vaka gözlemlemiş ve staj süreçlerini başarıyla tamamlamıştır.</p>
 
