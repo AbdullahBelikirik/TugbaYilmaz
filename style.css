@@ -7,7 +7,7 @@
     --bg-white: #ffffff;
     --text-dark: #333333;
     --text-light: #666666;
-    --font-heading: 'Playfair Display', serif;
+    --font-heading: 'Open Sans', sans-serif;
     --font-body: 'Open Sans', sans-serif;
     --radius-md: 12px;
 }
@@ -209,7 +209,6 @@ img {
     margin-left: 10px !important;
 }
 
-/* Navbar butonunun yazısı her zaman beyaz olsun */
 .navbar .btn-primary {
     color: white !important;
 }
@@ -221,25 +220,22 @@ img {
     color: var(--primary-color);
 }
 
-/* DROPDOWN MENÜ AYARLARI (GÜNCELLENDİ: BEYAZ ARKA PLAN) */
 .dropdown {
     position: relative !important;
     display: inline-block;
 }
 
 .dropdown-content {
-    display: none !important; /* Varsayılan gizle */
-    position: absolute !important; /* Havada asılı */
+    display: none !important; 
+    position: absolute !important; 
     top: 100%; 
     
-    /* --- ORTALAMA AYARI --- */
     left: 50% !important; 
     transform: translateX(-50%) !important; 
-    /* ---------------------- */
 
-    background-color: #ffffff !important; /* BEYAZ RENK YAPILDI */
+    background-color: #ffffff !important; 
     min-width: 230px;
-    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.15); /* Şık gölge */
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.15); 
     z-index: 9999;
     border-radius: 12px;
     padding: 10px 0;
@@ -267,12 +263,11 @@ img {
 }
 
 .dropdown-content a:hover {
-    background-color: var(--bg-light) !important; /* Hover olunca hafif krem olsun */
+    background-color: var(--bg-light) !important;
     color: var(--primary-color) !important;
     padding-left: 25px;
 }
 
-/* HERO BÖLÜMÜ */
 .hero-section {
     padding-top: 160px;
     padding-bottom: 100px;
@@ -633,7 +628,6 @@ img {
     color: white;
 }
 
-/* SOSYAL MEDYA */
 .content-tabs-container {
     background: white;
     border-bottom: 1px solid #eee;
@@ -930,7 +924,6 @@ img {
     margin: 0 auto !important;
 }
 
-/* PAGE HEADER (SAYFA BAŞLIKLARI) */
 .page-header {
     background-color: var(--primary-color);
     color: white;
@@ -944,7 +937,6 @@ img {
     color: white !important;
 }
 
-/* ÖZEL İSTİSNA: Koyu renk başlıklı sayfalar (örn: sosyal medya) */
 .page-header.dark-text h1,
 .page-header.dark-text p {
     color: #333 !important;
@@ -1018,7 +1010,6 @@ img {
     font-size: 0.9rem;
 }
 
-/* FOOTER */
 .footer-wrapper {
     background-color: var(--bg-light) !important;
     background-image: none !important;
@@ -1150,7 +1141,6 @@ img {
     color: #fff;
 }
 
-/* İLETİŞİM SAYFASI */
 .contact-section {
     padding: 80px 0;
     background-color: var(--bg-light);
@@ -1261,7 +1251,6 @@ textarea.form-control {
     resize: vertical;
 }
 
-/* BLOG DETAY SAYFALARI - YENİ HİZALAMA */
 .blog-detail-wrapper {
     max-width: 800px; 
     margin: 0 auto;
@@ -1295,16 +1284,15 @@ textarea.form-control {
     color: var(--text-dark);
 }
 
-/* GÜNCELLENDİ: Başlıklar sola yaslı, paragraflar iki yana yaslı */
 .blog-text-content h1,
 .blog-text-content h2,
 .blog-text-content h3,
 .blog-text-content h4 {
-    text-align: left; /* Başlıklar sola */
+    text-align: left; 
 }
 
 .blog-text-content p {
-    text-align: justify; /* Paragraflar bloğu kaplasın */
+    text-align: justify; 
 }
 
 .lead-text {
@@ -1359,24 +1347,21 @@ textarea.form-control {
     color: #666;
 }
 
-/* --- BLOG DETAY KUTUSU (Hizmetler Sayfası Tarzı) --- */
 .blog-detail-box {
-    background: white; /* Beyaz arka plan */
-    border-radius: 12px; /* Köşeleri yuvarla */
-    padding: 50px; /* İçerik kenarlara yapışmasın, ferah olsun */
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05); /* Hafif gölge */
-    border-top: 5px solid var(--primary-color); /* O meşhur renkli üst şerit */
-    margin-bottom: 30px; /* Alttan biraz boşluk */
+    background: white; 
+    border-radius: 12px; 
+    padding: 50px; 
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.05); 
+    border-top: 5px solid var(--primary-color); 
+    margin-bottom: 30px; 
 }
 
-/* Mobilde ekran daralınca iç boşluğu biraz azaltalım */
 @media (max-width: 600px) {
     .blog-detail-box {
         padding: 25px;
     }
 }
 
-/* RESPONSIVE (MOBİL UYUMLULUK) */
 @media (max-width: 900px) {
     .container {
         width: 90%;
@@ -1386,7 +1371,6 @@ textarea.form-control {
         padding: 50px 0;
     }
 
-    /* Mobilde arka plan tek renk olsun */
     .hero-section {
         background: var(--bg-light);
     }
@@ -1470,16 +1454,14 @@ textarea.form-control {
         border-bottom: 1px solid #f5f5f5;
     }
 
-    /* Mobilde dropdown menü düz mantık çalışsın, gizlenmesin */
     .dropdown-content {
         display: none; 
-        position: static !important; /* Havada asılı kalmasın */
+        position: static !important; 
         box-shadow: none;
         border: none;
         background-color: #f9f9f9 !important;
         width: 100%;
         padding-left: 20px;
-        /* MOBİLDE ORTALAMA OLMASIN, DÜZ DURSUN: */
         left: auto !important; 
         transform: none !important;
     }
@@ -1506,40 +1488,35 @@ textarea.form-control {
         width: 100%;
     }
 
-    /* --- FOOTER MOBİL DÜZENLEMESİ --- */
-    
-    /* Footer'ın genel yüksekliğini azaltmak için üst/alt boşlukları kısıyoruz */
     .footer {
         padding: 30px 0 20px; 
-        text-align: center; /* Mobilde her şeyi ortala */
+        text-align: center;
     }
 
     .footer-grid {
-        grid-template-columns: 1fr; /* Hepsini tek sütun yap (alt alta) */
-        gap: 15px; /* KUTULAR ARASI BOŞLUĞU AZALTTIK */
+        grid-template-columns: 1fr;
+        gap: 15px;
         margin-bottom: 30px;
     }
 
-    /* Logoyu biraz küçültüp, altındaki boşluğu alalım */
     .footer-logo-img {
         width: 140px; 
         margin-bottom: 15px;
     }
 
     .footer-desc {
-        font-size: 0.9rem; /* Yazıyı bir tık küçült */
+        font-size: 0.9rem;
         margin-bottom: 15px;
     }
 
-    /* Link listesini daha kompakt hale getirelim */
     .footer-links li {
-        margin-bottom: 8px; /* Linkler arası boşluğu azalttık */
-        display: inline-block; /* Yan yana sığsınlar diye (Opsiyonel) */
-        margin-right: 10px;    /* Yan yana dizersen araya boşluk */
+        margin-bottom: 8px; 
+        display: inline-block; 
+        margin-right: 10px;
     }
     
     .footer-socials {
-        justify-content: center; /* İkonları ortala */
+        justify-content: center; 
         margin-top: 10px;
     }
 
