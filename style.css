@@ -1451,19 +1451,15 @@ textarea.form-control {
     }
 
     .dropdown-content {
-        display: none; 
-        position: static !important; 
-        box-shadow: none;
-        border: none;
-        background-color: #f9f9f9 !important;
-        width: 100%;
-        padding-left: 20px;
-        left: auto !important; 
-        transform: none !important;
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        position: absolute !important;
+        pointer-events: none !important;
     }
 
     .dropdown:hover .dropdown-content {
-        display: block;
+        display: none !important;
     }
 
     .hero-container {
