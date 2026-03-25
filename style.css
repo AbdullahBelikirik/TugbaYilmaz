@@ -1571,3 +1571,63 @@ textarea.form-control {
     transform: translateY(0);
     opacity: 1;
 }
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonial-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-slide {
+    min-width: 100%;
+    padding: 20px;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--primary-color);
+    text-align: center;
+    position: relative;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.slider-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+}
