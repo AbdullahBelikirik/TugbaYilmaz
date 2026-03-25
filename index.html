@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="images/favicon.JPG" type="image/png">
     <style>
-        /* Slider İçin İyileştirmeler */
+        /* ----- PC VE GENEL SLIDER AYARLARI ----- */
         .testimonial-text {
             font-style: italic;
             color: #444;
@@ -17,6 +17,7 @@
             line-height: 1.6; 
             font-size: 1.05rem;
         }
+
         .testimonial-author {
             font-weight: 700;
             color: var(--primary-dark);
@@ -28,6 +29,21 @@
             padding-top: 15px; 
             min-width: 200px;
         }
+
+        .slider-arrow {
+            background: none;
+            border: none;
+            font-size: 2rem;
+            color: var(--primary-color);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .slider-arrow:hover {
+            transform: translateY(-50%) scale(1.1) !important;
+            color: var(--primary-dark);
+        }
+
         .dot {
             height: 12px;
             width: 12px;
@@ -38,12 +54,39 @@
             cursor: pointer;
             margin: 0 5px;
         }
+
         .dot.active {
             background-color: var(--primary-color);
             transform: scale(1.3);
         }
+
+        /* ----- MOBİL DÜZENLEMELER (PC'Yİ BOZMAZ) ----- */
         @media (max-width: 768px) {
-            .testimonial-card { padding: 25px 20px !important; }
+            /* Dış ok boşluğunu daraltıp alandan tasarruf ediyoruz */
+            div[style*="padding: 0 40px"] { padding: 0 25px !important; }
+            
+            /* Kartı "Merak Edilenler" kutusu formuna (daha az padding) sokuyoruz */
+            .testimonial-card, .testimonial-card-inner { 
+                padding: 20px 15px !important; 
+            }
+            
+            /* Yazıları sağlı sollu (justify) yaslıyoruz ve boyutunu okunaklı yapıyoruz */
+            .testimonial-text {
+                text-align: justify !important;
+                font-size: 0.95rem !important; /* Merak edilenler ile aynı boyut */
+                line-height: 1.5 !important;
+            }
+            
+            /* Yazar ismini de sola hizalıyoruz */
+            .testimonial-author { 
+                justify-content: flex-start !important; 
+                min-width: auto;
+            }
+            
+            /* Okların boyutunu ve konumunu mobilde sıkışmaması için ayarlıyoruz */
+            .slider-arrow { font-size: 1.5rem !important; }
+            .prev-arrow { left: -5px !important; }
+            .next-arrow { right: -5px !important; }
         }
     </style>
 </head>
