@@ -159,6 +159,8 @@ img {
 
 .logo-img-link {
     display: flex;
+    flex-shrink: 0;
+    margin-right: 30px;
     align-items: center;
     height: 100%;
     text-decoration: none;
@@ -1358,27 +1360,8 @@ textarea.form-control {
     }
 }
 
-@media (max-width: 900px) {
-    .container {
-        width: 90%;
-    }
-
-    .section {
-        padding: 50px 0;
-    }
-
-    .hero-section {
-        background: var(--bg-light);
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
+/* Menü sığmadığında (logo + linkler ~1300px) hamburger menüye geç */
+@media (max-width: 1340px) {
     .hamburger {
         display: block;
         z-index: 1002;
@@ -1464,6 +1447,28 @@ textarea.form-control {
 
     .dropdown:hover .dropdown-content {
         display: none !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        width: 90%;
+    }
+
+    .section {
+        padding: 50px 0;
+    }
+
+    .hero-section {
+        background: var(--bg-light);
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 
     .hero-container {
